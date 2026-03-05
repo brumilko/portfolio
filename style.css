@@ -191,7 +191,8 @@ th {
 @font-face {
   font-family: "GeistMono";
   src: url("fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"), url("fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
-  font-weight: 100 1000; }
+  font-weight: 100 1000; 
+  font-display: swap; }
 /*---------------------------
 		Globals
 ---------------------------*/
