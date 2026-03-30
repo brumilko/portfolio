@@ -185,26 +185,40 @@ th {
 /*---------------------------
 		Variables
 ---------------------------*/
+:root {
+  /* Store channels, not the full color */
+  --roxo: 62% 0.212 293deg;
+  --bg: 0.227 0.018 293deg;
+  --branco: 97% 0.012 293deg;
+  --cinzaEscuro: 44% 0.022 293deg;
+  --cinza: 62% 0.018 293deg; }
+
 /*---------------------------
 		fonts
 ---------------------------*/
 @font-face {
   font-family: "GeistMono";
   src: url("fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"), url("fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
-  font-weight: 100 1000; 
+  font-weight: 100 1000;
   font-display: swap; }
 /*---------------------------
 		Globals
 ---------------------------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
 .rounded {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; }
-
-.shadow-center {
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
 
 .flexbox {
   display: -webkit-box;
@@ -218,12 +232,6 @@ th {
   gap: 32px;
   grid-template-columns: repeat(auto-fill, 300px); }
 
-.animate {
-  -moz-transition: ease-in-out 0.3s all;
-  -o-transition: ease-in-out 0.3s all;
-  -webkit-transition: ease-in-out 0.3s all;
-  transition: ease-in-out 0.3s all; }
-
 .wrapper {
   padding: 64px 64px 0;
   width: 100%;
@@ -233,9 +241,6 @@ th {
 
 .jobs.wrapper {
   width: 100%; }
-
-.sectionContent {
-  padding: 50px 0; }
 
 picture {
   margin: 0; }
@@ -252,7 +257,6 @@ a {
   transition: ease-in-out 0.3s all; }
 
 svg {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -265,8 +269,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 html, body {
-  background-color: #1e1e1e;
-  color: #a6aaad;
+  background-color: oklch(var(--bg)/100%);
+  color: oklch(var(--branco)/100%);
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -277,16 +281,6 @@ html, body {
   width: 100%;
   -webkit-overflow-scrolling: touch; }
 
-.animation {
-  position: relative;
-  top: 0px;
-  left: 50vw;
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
-
 .inicio {
   align-items: center; }
 
@@ -295,35 +289,33 @@ html, body {
   width: 30px;
   height: 30px;
   opacity: 0.3;
-  fill: #a6aaad; }
+  fill: oklch(var(--cinza)/100%); }
 
 .nome {
   font-size: 16px;
   font-weight: 600;
-  color: #9468ff; }
+  color: oklch(var(--roxo)/100%); }
   .nome b {
     font-weight: 300;
-    color: #a6aaad; }
+    color: oklch(var(--cinza)/100%); }
   .nome small {
     font-size: 12px;
     font-weight: 300;
-    color: #a6aaad; }
+    color: oklch(var(--cinza)/100%); }
 
 .lang {
   text-align: right;
   position: absolute;
   right: 64px; }
   .lang a {
-    color: #a6aaad; }
-    .lang a:hover {
-      color: #9468ff; }
-  .lang span.active {
-    font-weight: 600; }
+    color: oklch(var(--cinza)/100%); }
+    .lang a.active {
+      color: oklch(var(--roxo)/100%); }
 
 .sobre h2 {
   font-size: 16px;
   font-weight: 600;
-  color: #9468ff;
+  color: oklch(var(--roxo)/100%);
   width: 50%;
   grid-column: 1 / 2; }
 .sobre .bio {
@@ -332,9 +324,9 @@ html, body {
   .sobre .bio p {
     margin: 1em 0; }
 .sobre .links a {
-  color: #a6aaad; }
+  color: oklch(var(--cinza)/100%); }
   .sobre .links a:hover {
-    color: #9468ff; }
+    color: oklch(var(--roxo)/100%); }
 
 .jobs {
   position: relative;
@@ -356,7 +348,7 @@ html, body {
     -moz-align-items: flex-start;
     align-items: flex-start; }
     .jobs .job:last-child {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid oklch(var(--cinzaEscuro)/100%);
       padding-bottom: 64px; }
     .jobs .job .infos {
       z-index: 3;
@@ -368,11 +360,10 @@ html, body {
       .jobs .job .infos h3 {
         font-size: 16px;
         font-weight: 600;
-        color: #9468ff; }
+        color: oklch(var(--roxo)/100%); }
       .jobs .job .infos b {
-        color: #a6aaad;
-        font-weight: 300;
-        opacity: 0.5; }
+        color: oklch(var(--cinza)/100%);
+        font-weight: 300; }
     .jobs .job .tns-outer {
       z-index: 1;
       width: calc(100% - 932px);
@@ -409,7 +400,7 @@ html, body {
           border-bottom: 1px solid rgba(0, 0, 0, 0.2);
           border-top: 1px solid rgba(255, 255, 255, 0.3); }
           .jobs .job .tns-outer .tns-nav button.tns-nav-active {
-            background-color: #9468ff; }
+            background-color: oklch(var(--roxo)/100%); }
       .jobs .job .tns-outer .tns-controls {
         position: absolute;
         top: 50%;
@@ -420,7 +411,6 @@ html, body {
         transform: translateY(-50%);
         z-index: 4;
         font-size: 32px;
-        width: 100%;
         padding: 0 16px;
         height: 100%;
         width: 100%;
@@ -450,7 +440,7 @@ html, body {
     padding: 32px 16px 32px 64px;
     width: 300px;
     height: 100%;
-    background-color: rgba(30, 30, 30, 0.8); }
+    background-color: oklch(var(--bg)/80%); }
 
 .fadeIn {
   -webkit-transform: translateY(100px) scale(0.97);
@@ -480,13 +470,11 @@ footer {
     position: relative;
     margin: 0 auto;
     opacity: 1;
-    fill: #1e1e1e;
+    fill: oklch(var(--bg)/100%);
     width: 128px;
     height: 128px;
     display: block;
     z-index: 3; }
-    footer .logo .circulo01, footer .logo .retangulo {
-      background-color: red; }
   footer .grad01, footer .grad02, footer .grad03 {
     position: absolute;
     top: 50%;
