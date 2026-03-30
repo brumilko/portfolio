@@ -98,12 +98,7 @@ picture{
 a{
 	@include animate();
 }
-svg {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+
 figure {
     margin: 0;
 }
@@ -381,5 +376,9 @@ footer{
 		}
 	}
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .grad01, .grad02, .grad03 {
+    animation: none;
+  }
+}
 @import "responsive";
