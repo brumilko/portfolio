@@ -31,6 +31,14 @@
 	.jobs .job .infos .texto {
 		font-size: 12px;
 	}
+	body.trocarFigurinhas{
+		.content-block{
+			padding: 64px 32px 0;
+		}
+		header, .project-metadata{
+			padding: 0px 32px 0;
+		}
+	}
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
@@ -57,6 +65,13 @@
 		position: absolute;
 		left: 110px;
 	}
+
+	body.trocarFigurinhas{
+		font-size: 0.85rem;
+		.meta-row{
+			max-width: 100%;
+		}
+	}
 }
 
 
@@ -76,6 +91,19 @@
 	}
 	.nome{
 		left: 80px;
+	}
+	body.trocarFigurinhas{
+		.project-case-study{
+			.grid-2-col, .project-header{
+				grid-template-columns: auto;
+			}
+		}
+		.content-block{
+			padding: 64px 16px 0;
+		}
+		header, .project-metadata{
+			padding: 0px 16px 0;
+		}
 	}
 }
 

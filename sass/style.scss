@@ -27,6 +27,8 @@ Version: 1
   --branco:			97% 0.012 293deg;
   --cinzaEscuro:	44% 0.022 293deg;
   --cinza:			62% 0.018 293deg;
+
+  --cinzaProj:	0.7357 0.0063 239.85;
 }
 
 $cinza: 		oklch(var(--cinza) / 100%);
@@ -34,6 +36,8 @@ $cinzaEscuro: 	oklch(var(--cinzaEscuro) / 100%);
 $background: 	oklch(var(--bg) / 100%);
 $roxo: 			oklch(var(--roxo) / 100%);
 $branco: 		oklch(var(--branco) / 100%);
+
+$cinzaProj: oklch(var(--cinzaProj) / 100%);
 
 
 /*---------------------------
@@ -373,6 +377,127 @@ footer{
 		100% {
 		-webkit-transform: rotate(360deg);
 		        transform: rotate(360deg);
+		}
+	}
+}
+
+body.trocarFigurinhas{
+	.wrapper{
+		max-width: 1150px;
+		margin: 0 auto;
+		padding: 64px 0;
+	}
+	.content-block{
+		padding-top:64px;
+	}
+	h2, h3, p{
+		color: $cinzaProj;
+		margin:0;
+		padding:0;
+	}
+	p{
+		padding-bottom: 1em;
+	}
+	h2{
+		font-size: 20px;
+		padding-bottom: 1em;
+	}
+	h3{
+		font-size: 16px;
+	}
+	picture{
+		@include rounded(15px);
+		overflow: hidden;
+		display: block;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	.project-metadata{
+		font-size: 0.85rem;
+		grid-template-columns: auto;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	.meta-row {
+	  display: flex;
+	  align-items: flex-start;
+	  margin-bottom: 24px;
+	  color: $cinzaProj;
+	  max-width: 66%;
+	}
+
+	.meta-label {
+	  flex-shrink: 0;
+	  padding-top: 8px;
+	  padding-right: 8px;
+	  font-weight:600;
+	  line-height: 1.5;
+	  border: 1px solid transparent;
+	}
+
+	.meta-content {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 8px;
+	}
+
+	.badge {
+	  display: inline-flex;
+	  align-items: center;
+	  gap: 8px;
+	  padding: 8px 16px;
+	  background-color: transparent; 
+	  border: 1px solid oklch(var(--cinzaProj) / 50%);
+	  @include rounded(6px);
+	  line-height: 1.5;
+	}
+
+	.badge img {
+	  width: 16px;
+	  height: 16px;
+	  object-fit: contain;
+	}
+	.project-case-study{
+		gap: 32px;
+		grid-template-columns: auto;
+		padding-top: 64px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+		.project-header{
+			gap: 32px;
+			grid-template-columns: 1fr 2fr;
+			.project-title{
+				font-size: 24px;
+				color: $roxo;
+				width: 300px;
+			}
+			
+		}
+		.grid-2-col{
+			grid-template-columns: auto auto;
+			gap: 32px;
+		}
+	}
+	.imgVideo{
+		position: relative;
+		picture{
+			position: relative;
+			z-index: 2;
+		}
+		video{
+			position: absolute;
+		  z-index: 1;
+		  top: 50%;
+		  height: 77.75%;
+		  transform: translateY(-50%);
+		}
+		.videoRight{
+			left: 56.1%;
+		}
+		.videoLeft{
+			right: 56.1%;
+		}
+		.videoCenter{
+			left:50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

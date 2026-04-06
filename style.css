@@ -191,7 +191,8 @@ th {
   --bg: 0.227 0.018 293deg;
   --branco: 97% 0.012 293deg;
   --cinzaEscuro: 44% 0.022 293deg;
-  --cinza: 62% 0.018 293deg; }
+  --cinza: 62% 0.018 293deg;
+  --cinzaProj: 0.7357 0.0063 239.85; }
 
 /*---------------------------
 		fonts
@@ -500,6 +501,100 @@ footer {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+body.trocarFigurinhas .wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 64px 0; }
+body.trocarFigurinhas .content-block {
+  padding-top: 64px; }
+body.trocarFigurinhas h2, body.trocarFigurinhas h3, body.trocarFigurinhas p {
+  color: oklch(var(--cinzaProj)/100%);
+  margin: 0;
+  padding: 0; }
+body.trocarFigurinhas p {
+  padding-bottom: 1em; }
+body.trocarFigurinhas h2 {
+  font-size: 20px;
+  padding-bottom: 1em; }
+body.trocarFigurinhas h3 {
+  font-size: 16px; }
+body.trocarFigurinhas picture {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1); }
+body.trocarFigurinhas .project-metadata {
+  font-size: 0.85rem;
+  grid-template-columns: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+body.trocarFigurinhas .meta-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  color: oklch(var(--cinzaProj)/100%);
+  max-width: 66%; }
+body.trocarFigurinhas .meta-label {
+  flex-shrink: 0;
+  padding-top: 8px;
+  padding-right: 8px;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 1px solid transparent; }
+body.trocarFigurinhas .meta-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; }
+body.trocarFigurinhas .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid oklch(var(--cinzaProj)/50%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  line-height: 1.5; }
+body.trocarFigurinhas .badge img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain; }
+body.trocarFigurinhas .project-case-study {
+  gap: 32px;
+  grid-template-columns: auto;
+  padding-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  body.trocarFigurinhas .project-case-study .project-header {
+    gap: 32px;
+    grid-template-columns: 1fr 2fr; }
+    body.trocarFigurinhas .project-case-study .project-header .project-title {
+      font-size: 24px;
+      color: oklch(var(--roxo)/100%);
+      width: 300px; }
+  body.trocarFigurinhas .project-case-study .grid-2-col {
+    grid-template-columns: auto auto;
+    gap: 32px; }
+body.trocarFigurinhas .imgVideo {
+  position: relative; }
+  body.trocarFigurinhas .imgVideo picture {
+    position: relative;
+    z-index: 2; }
+  body.trocarFigurinhas .imgVideo video {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    height: 77.75%;
+    transform: translateY(-50%); }
+  body.trocarFigurinhas .imgVideo .videoRight {
+    left: 56.1%; }
+  body.trocarFigurinhas .imgVideo .videoLeft {
+    right: 56.1%; }
+  body.trocarFigurinhas .imgVideo .videoCenter {
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 @media (prefers-reduced-motion: reduce) {
   .grad01, .grad02, .grad03 {
     animation: none; } }
@@ -517,7 +612,12 @@ footer {
     grid-template-columns: repeat(auto-fill, 240px); }
 
   .jobs .job .infos .texto {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  body.trocarFigurinhas .content-block {
+    padding: 64px 32px 0; }
+  body.trocarFigurinhas header, body.trocarFigurinhas .project-metadata {
+    padding: 0px 32px 0; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 960px) {
   .grid {
@@ -536,7 +636,12 @@ footer {
 
   .nome {
     position: absolute;
-    left: 110px; } }
+    left: 110px; }
+
+  body.trocarFigurinhas {
+    font-size: 0.85rem; }
+    body.trocarFigurinhas .meta-row {
+      max-width: 100%; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
   .wrapper {
@@ -550,7 +655,14 @@ footer {
     padding-bottom: 32px; }
 
   .nome {
-    left: 80px; } }
+    left: 80px; }
+
+  body.trocarFigurinhas .project-case-study .grid-2-col, body.trocarFigurinhas .project-case-study .project-header {
+    grid-template-columns: auto; }
+  body.trocarFigurinhas .content-block {
+    padding: 64px 16px 0; }
+  body.trocarFigurinhas header, body.trocarFigurinhas .project-metadata {
+    padding: 0px 16px 0; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 490px) {
   .wrapper {
