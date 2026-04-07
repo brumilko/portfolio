@@ -443,7 +443,14 @@ footer{
 }
 
 body.trocarFigurinhas{
-	.wrapper{
+	nav{
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding-bottom: 64px;
+	}
+	header{
+		
+	}
+	.wrapperCase{
 		max-width: 1150px;
 		margin: 0 auto;
 		padding: 64px 0;
@@ -476,19 +483,19 @@ body.trocarFigurinhas{
 		font-size: 0.85rem;
 		grid-template-columns: auto;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding-bottom: 64px;
 	}
 	.meta-row {
 	  display: flex;
 	  align-items: flex-start;
-	  margin-bottom: 24px;
 	  color: $cinzaProj;
 	  max-width: 66%;
 	}
 
 	.meta-label {
 	  flex-shrink: 0;
-	  padding-top: 8px;
-	  padding-right: 8px;
+	  padding-top: .25rem;
+	  padding-right: .75rem;
 	  font-weight:600;
 	  line-height: 1.5;
 	  border: 1px solid transparent;
@@ -504,7 +511,7 @@ body.trocarFigurinhas{
 	  display: inline-flex;
 	  align-items: center;
 	  gap: 8px;
-	  padding: 8px 16px;
+	  padding: .25rem .75rem;
 	  background-color: transparent; 
 	  border: 1px solid oklch(var(--cinzaProj) / 50%);
 	  @include rounded(6px);
@@ -532,7 +539,6 @@ body.trocarFigurinhas{
 		gap: 32px;
 		grid-template-columns: auto;
 		padding-top: 64px;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
 
 		.project-header{
 			gap: 32px;
@@ -559,7 +565,7 @@ body.trocarFigurinhas{
 			position: absolute;
 		  z-index: 1;
 		  top: 50%;
-		  height: 77.75%;
+		  height: 77.9%;
 		  transform: translateY(-50%);
 		}
 		.videoRight{
