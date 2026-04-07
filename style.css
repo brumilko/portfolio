@@ -632,7 +632,7 @@ body.trocarFigurinhas .project-case-study {
       color: oklch(var(--roxo)/100%);
       width: 300px; }
   body.trocarFigurinhas .project-case-study .grid-2-col {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 32px; }
 body.trocarFigurinhas .imgVideo {
   position: relative; }
