@@ -120,7 +120,7 @@ html, body{
 	font-size:16px;
 	-webkit-font-smoothing: antialiased;
     font-family: "GeistMono", sans-serif;
-	font-weight: 300;
+	font-weight: 200;
 	position: relative;
 	width: 100%;
     -webkit-overflow-scrolling: touch;
@@ -129,12 +129,73 @@ html, body{
 .inicio{
 	align-items: center;
 }
-.logo{
+
+.goHome{
 	position: relative;
 	width:30px;
 	height:30px;
-	opacity: 0.3;
-	fill: $cinza;
+	.logo{
+		position: relative;
+		width:30px;
+		height:30px;
+		fill: $cinzaEscuro;
+		z-index:3;
+		@include animate();
+		-webkit-filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0));
+	  filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0));
+	}
+	.grad01, .grad02, .grad03{
+		position: absolute;
+		top: 50%;
+    left: 50%;
+		z-index: 2;
+		width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    opacity: 0;
+	}
+	.grad01{
+		background: rgb(148,104,255);
+		background: radial-gradient(circle, rgba(148,104,255,1) 0%, rgba(148,104,255,0) 50%);
+		
+	    animation: roda 15s linear infinite;
+		transform-origin: 50% 52%;
+	}
+	.grad02{
+		background: rgb(17,255,222);
+		background: radial-gradient(circle, rgba(17,255,222,1) 0%, rgba(17,255,222,0) 50%);
+		
+	    animation: roda 20s linear infinite;
+		transform-origin: 50% 48%;
+	}
+	.grad03{
+		background: rgb(74,0,255);
+		background: radial-gradient(circle, rgba(74,0,255,1) 0%, rgba(74,0,255,0) 50%);
+		
+	    animation: roda 10s linear infinite;
+		transform-origin: 46% 46%;
+	}
+	@keyframes roda {
+		0% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+		}
+		100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+		}
+	}
+}
+
+.goHome:hover{
+	.logo{
+		opacity: 1;
+		fill: $background;
+	}
+	.grad01, .grad02, .grad03{
+		opacity: 1;
+	}
 }
 
 .nome{
@@ -448,6 +509,18 @@ body.trocarFigurinhas{
 	  border: 1px solid oklch(var(--cinzaProj) / 50%);
 	  @include rounded(6px);
 	  line-height: 1.5;
+	}
+	a.badge{
+		background-color: $roxo; 
+	  border: 1px solid $roxo;
+	  color: $background;
+	  font-weight:600;
+	  text-transform: uppercase;
+	  font-size: 0.85rem;
+
+	  &:hover{
+	  	opacity: 0.8;
+	  }
 	}
 
 	.badge img {
