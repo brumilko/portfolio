@@ -564,10 +564,10 @@ body.trocarFigurinhas h2, body.trocarFigurinhas h3, body.trocarFigurinhas p {
 body.trocarFigurinhas p {
   padding-bottom: 1em; }
 body.trocarFigurinhas h2 {
-  font-size: 20px;
+  font-size: 2rem;
   padding-bottom: 1em; }
 body.trocarFigurinhas h3 {
-  font-size: 16px; }
+  font-size: 1.25rem; }
 body.trocarFigurinhas picture {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
