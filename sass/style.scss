@@ -44,14 +44,7 @@ $cinzaProj: oklch(var(--cinzaProj) / 100%);
 		fonts
 ---------------------------*/
 
-@font-face {
-  font-family: "GeistMono";
-  src: url("fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"),
-       url("fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
-  font-weight: 100 1000;
-  font-display: swap;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:wght@300..800&display=swap');
 
 /*---------------------------
 		Globals
@@ -109,6 +102,7 @@ figure {
 
 h1, h2, h3, h4, h5, h6{
 	margin: 0;
+	font-family: "Funnel Display", sans-serif;
 }
 
 
@@ -118,9 +112,11 @@ html, body{
 	padding: 0;
 	margin: 0;
 	font-size:16px;
+	font-optical-sizing: auto;
+	font-style: normal;
 	-webkit-font-smoothing: antialiased;
-    font-family: "GeistMono", sans-serif;
-	font-weight: 200;
+    font-family: "Funnel Sans", sans-serif;
+	font-weight: 300;
 	position: relative;
 	width: 100%;
     -webkit-overflow-scrolling: touch;
@@ -443,6 +439,7 @@ footer{
 }
 
 body.trocarFigurinhas{
+	line-height: 1.5rem;
 	nav{
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		padding-bottom: 64px;
@@ -464,11 +461,12 @@ body.trocarFigurinhas{
 		padding:0;
 	}
 	p{
-		padding-bottom: 1em;
+		padding-bottom: 1.5rem;
 	}
 	h2{
 		font-size: 2rem;
 		padding-bottom: 1em;
+		line-height: 3rem;
 	}
 	h3{
 		font-size: 1.25rem;
@@ -516,6 +514,9 @@ body.trocarFigurinhas{
 	  border: 1px solid oklch(var(--cinzaProj) / 50%);
 	  @include rounded(6px);
 	  line-height: 1.5;
+	  span{
+	  	margin: -0.06rem 0 0.06rem;
+	  }
 	}
 	a.badge{
 		background-color: $roxo; 
@@ -544,7 +545,8 @@ body.trocarFigurinhas{
 			gap: 32px;
 			grid-template-columns: 1fr 2fr;
 			.project-title{
-				font-size: 24px;
+				line-height: 3rem;
+				font-size:2rem;
 				color: $roxo;
 				width: 300px;
 			}

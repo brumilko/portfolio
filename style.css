@@ -5,6 +5,7 @@ Theme Name: Milkø 2024
 Author: Milkø
 Version: 1
 */
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:wght@300..800&display=swap");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -197,11 +198,6 @@ th {
 /*---------------------------
 		fonts
 ---------------------------*/
-@font-face {
-  font-family: "GeistMono";
-  src: url("fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"), url("fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
-  font-weight: 100 1000;
-  font-display: swap; }
 /*---------------------------
 		Globals
 ---------------------------*/
@@ -261,7 +257,8 @@ figure {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  font-family: "Funnel Display", sans-serif; }
 
 html, body {
   background-color: oklch(var(--bg)/100%);
@@ -269,9 +266,11 @@ html, body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  font-optical-sizing: auto;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
-  font-family: "GeistMono", sans-serif;
-  font-weight: 200;
+  font-family: "Funnel Sans", sans-serif;
+  font-weight: 300;
   position: relative;
   width: 100%;
   -webkit-overflow-scrolling: touch; }
@@ -548,110 +547,116 @@ footer {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-body.trocarFigurinhas nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 64px; }
-body.trocarFigurinhas .wrapperCase {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 64px 0; }
-body.trocarFigurinhas .content-block {
-  padding-top: 64px; }
-body.trocarFigurinhas h2, body.trocarFigurinhas h3, body.trocarFigurinhas p {
-  color: oklch(var(--cinzaProj)/100%);
-  margin: 0;
-  padding: 0; }
-body.trocarFigurinhas p {
-  padding-bottom: 1em; }
-body.trocarFigurinhas h2 {
-  font-size: 2rem;
-  padding-bottom: 1em; }
-body.trocarFigurinhas h3 {
-  font-size: 1.25rem; }
-body.trocarFigurinhas picture {
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-  display: block;
-  border: 1px solid rgba(255, 255, 255, 0.1); }
-body.trocarFigurinhas .project-metadata {
-  font-size: 0.85rem;
-  grid-template-columns: auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 64px; }
-body.trocarFigurinhas .meta-row {
-  display: flex;
-  align-items: flex-start;
-  color: oklch(var(--cinzaProj)/100%);
-  max-width: 66%; }
-body.trocarFigurinhas .meta-label {
-  flex-shrink: 0;
-  padding-top: .25rem;
-  padding-right: .75rem;
-  font-weight: 600;
-  line-height: 1.5;
-  border: 1px solid transparent; }
-body.trocarFigurinhas .meta-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px; }
-body.trocarFigurinhas .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: .25rem .75rem;
-  background-color: transparent;
-  border: 1px solid oklch(var(--cinzaProj)/50%);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  line-height: 1.5; }
-body.trocarFigurinhas a.badge {
-  background-color: oklch(var(--roxo)/100%);
-  border: 1px solid oklch(var(--roxo)/100%);
-  color: oklch(var(--bg)/100%);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem; }
-  body.trocarFigurinhas a.badge:hover {
-    opacity: 0.8; }
-body.trocarFigurinhas .badge img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain; }
-body.trocarFigurinhas .project-case-study {
-  gap: 32px;
-  grid-template-columns: auto;
-  padding-top: 64px; }
-  body.trocarFigurinhas .project-case-study .project-header {
+body.trocarFigurinhas {
+  line-height: 1.5rem; }
+  body.trocarFigurinhas nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 64px; }
+  body.trocarFigurinhas .wrapperCase {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 64px 0; }
+  body.trocarFigurinhas .content-block {
+    padding-top: 64px; }
+  body.trocarFigurinhas h2, body.trocarFigurinhas h3, body.trocarFigurinhas p {
+    color: oklch(var(--cinzaProj)/100%);
+    margin: 0;
+    padding: 0; }
+  body.trocarFigurinhas p {
+    padding-bottom: 1.5rem; }
+  body.trocarFigurinhas h2 {
+    font-size: 2rem;
+    padding-bottom: 1em;
+    line-height: 3rem; }
+  body.trocarFigurinhas h3 {
+    font-size: 1.25rem; }
+  body.trocarFigurinhas picture {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1); }
+  body.trocarFigurinhas .project-metadata {
+    font-size: 0.85rem;
+    grid-template-columns: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 64px; }
+  body.trocarFigurinhas .meta-row {
+    display: flex;
+    align-items: flex-start;
+    color: oklch(var(--cinzaProj)/100%);
+    max-width: 66%; }
+  body.trocarFigurinhas .meta-label {
+    flex-shrink: 0;
+    padding-top: .25rem;
+    padding-right: .75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border: 1px solid transparent; }
+  body.trocarFigurinhas .meta-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; }
+  body.trocarFigurinhas .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: .25rem .75rem;
+    background-color: transparent;
+    border: 1px solid oklch(var(--cinzaProj)/50%);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    line-height: 1.5; }
+    body.trocarFigurinhas .badge span {
+      margin: -0.06rem 0 0.06rem; }
+  body.trocarFigurinhas a.badge {
+    background-color: oklch(var(--roxo)/100%);
+    border: 1px solid oklch(var(--roxo)/100%);
+    color: oklch(var(--bg)/100%);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem; }
+    body.trocarFigurinhas a.badge:hover {
+      opacity: 0.8; }
+  body.trocarFigurinhas .badge img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain; }
+  body.trocarFigurinhas .project-case-study {
     gap: 32px;
-    grid-template-columns: 1fr 2fr; }
-    body.trocarFigurinhas .project-case-study .project-header .project-title {
-      font-size: 24px;
-      color: oklch(var(--roxo)/100%);
-      width: 300px; }
-  body.trocarFigurinhas .project-case-study .grid-2-col {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px; }
-body.trocarFigurinhas .imgVideo {
-  position: relative; }
-  body.trocarFigurinhas .imgVideo picture {
-    position: relative;
-    z-index: 2; }
-  body.trocarFigurinhas .imgVideo video {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    height: 77.9%;
-    transform: translateY(-50%); }
-  body.trocarFigurinhas .imgVideo .videoRight {
-    left: 56.1%; }
-  body.trocarFigurinhas .imgVideo .videoLeft {
-    right: 56.1%; }
-  body.trocarFigurinhas .imgVideo .videoCenter {
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    grid-template-columns: auto;
+    padding-top: 64px; }
+    body.trocarFigurinhas .project-case-study .project-header {
+      gap: 32px;
+      grid-template-columns: 1fr 2fr; }
+      body.trocarFigurinhas .project-case-study .project-header .project-title {
+        line-height: 3rem;
+        font-size: 2rem;
+        color: oklch(var(--roxo)/100%);
+        width: 300px; }
+    body.trocarFigurinhas .project-case-study .grid-2-col {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px; }
+  body.trocarFigurinhas .imgVideo {
+    position: relative; }
+    body.trocarFigurinhas .imgVideo picture {
+      position: relative;
+      z-index: 2; }
+    body.trocarFigurinhas .imgVideo video {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      height: 77.9%;
+      transform: translateY(-50%); }
+    body.trocarFigurinhas .imgVideo .videoRight {
+      left: 56.1%; }
+    body.trocarFigurinhas .imgVideo .videoLeft {
+      right: 56.1%; }
+    body.trocarFigurinhas .imgVideo .videoCenter {
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 @media (prefers-reduced-motion: reduce) {
   .grad01, .grad02, .grad03 {
