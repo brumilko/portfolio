@@ -25,18 +25,25 @@
 /*----------------------------------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1200px) {
-	.grid {
-		grid-template-columns: repeat(auto-fill, 240px);
-	}
-	.jobs .job .infos .texto {
-		font-size: 12px;
-	}
 	body.trocarFigurinhas{
 		.content-block{
 			padding: 64px 32px 0;
 		}
-		header, .project-metadata{
+		header{
 			padding: 0px 32px 0;
+		}
+		.project-metadata{
+			padding: 0px 32px 64px;
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1150px) {
+	body.trocarFigurinhas{
+		picture{
+			@include rounded(0);
 		}
 	}
 }
@@ -74,6 +81,25 @@
 	}
 }
 
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 740px) {
+	body.trocarFigurinhas{
+		.project-case-study{
+			.grid-3-col{
+				.block-left, .col-1{
+					grid-column: span 3;
+				}
+			}
+		}
+	}
+	texto grid .grid-1-col{
+		grid-template-columns: 1fr;
+	}
+	
+}
+
+
 
 
 /*----------------------------------------------------------------------------------------------------------------------*/
@@ -98,11 +124,17 @@
 				grid-template-columns: auto;
 			}
 		}
+		h2 {
+			grid-column: 1;
+		}
 		.content-block{
 			padding: 64px 16px 0;
 		}
 		header, .project-metadata{
 			padding: 0px 16px 0;
+		}
+		.project-metadata{
+			padding: 0px 16px 64px;
 		}
 	}
 }
@@ -115,5 +147,14 @@
 	}
 	.nome{
 		left: 80px;
+	}
+	body.trocarFigurinhas{
+		.project-case-study{
+			.project-header{
+				.project-title{
+					flex-wrap: wrap;
+				}
+			}
+		}
 	}
 }
