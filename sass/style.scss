@@ -439,28 +439,6 @@ html, body{
 	}
 }
 
-.fadeIn {
-    -webkit-transform: translateY(100px) scale(0.97);
-    transform: translateY(100px) scale(0.97);
-    -webkit-transition-delay: .8s;
-    -o-transition-delay: .8s;
-    transition-delay: .8s;
-    -webkit-transition: .9s;
-    -o-transition: .9s;
-    transition: .9s;
-    transition-timing-function: cubic-bezier(0,.5,.51,1);
-    opacity: 0;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-}
-.inView {
-    opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-    transform: translateY(0px) scale(1);
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-
 footer{
 	padding: 128px 0;
 	position: relative;
