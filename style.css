@@ -662,8 +662,7 @@ body.trocarFigurinhas {
     grid-template-columns: auto;
     padding-top: 64px; }
     body.trocarFigurinhas .project-case-study .project-header {
-      gap: 0px;
-      grid-template-columns: 2fr 1fr; }
+      gap: 0px; }
       body.trocarFigurinhas .project-case-study .project-header .project-title {
         padding-bottom: 1em;
         align-items: center; }
@@ -719,9 +718,6 @@ body.trocarFigurinhas {
     border-radius: 0; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 960px) {
-  .grid {
-    grid-template-columns: 1fr 1fr; }
-
   .jobs .job .tns-outer, .jobs .job .infos {
     grid-column: 1 / 3; }
 
@@ -746,7 +742,7 @@ body.trocarFigurinhas {
   body.trocarFigurinhas .project-case-study .grid-3-col .block-left, body.trocarFigurinhas .project-case-study .grid-3-col .col-1 {
     grid-column: span 3; }
 
-  texto grid .grid-1-col {
+  .texto .grid .grid-1-col {
     grid-template-columns: 1fr; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
