@@ -71,7 +71,7 @@ $cinzaProj: oklch(var(--cinzaProj) / 100%);
 .grid{
 	display: grid;
 	gap: 32px;
-	grid-template-columns: repeat(auto-fill, 300px)
+	// grid-template-columns: repeat(auto-fill, 300px);
 }
 .grid-1-col{
 	grid-template-columns: 1fr;
@@ -204,6 +204,7 @@ html, body{
 
 .inicio{
 	align-items: center;
+	grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .goHome{
@@ -300,7 +301,7 @@ html, body{
 	}
 }
 .sobre{
-
+	max-width:  600px;
 	h2{
 		font-size: 16px;
 		font-weight:600;

@@ -226,8 +226,7 @@ th {
 
 .grid {
   display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fill, 300px); }
+  gap: 32px; }
 
 .grid-1-col {
   grid-template-columns: 1fr; }
@@ -345,7 +344,8 @@ html, body {
   -webkit-overflow-scrolling: touch; }
 
 .inicio {
-  align-items: center; }
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, 300px); }
 
 .goHome {
   position: relative;
@@ -422,21 +422,23 @@ html, body {
     .lang a.active {
       color: oklch(var(--roxo)/100%); }
 
-.sobre h2 {
-  font-size: 16px;
-  font-weight: 600;
-  color: oklch(var(--roxo)/100%);
-  width: 50%;
-  grid-column: 1 / 2; }
-.sobre .bio {
-  font-size: 16px;
-  grid-column: 1 / span 2; }
-  .sobre .bio p {
-    margin: 1em 0; }
-.sobre .links a {
-  color: oklch(var(--cinza)/100%); }
-  .sobre .links a:hover {
-    color: oklch(var(--roxo)/100%); }
+.sobre {
+  max-width: 600px; }
+  .sobre h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: oklch(var(--roxo)/100%);
+    width: 50%;
+    grid-column: 1 / 2; }
+  .sobre .bio {
+    font-size: 16px;
+    grid-column: 1 / span 2; }
+    .sobre .bio p {
+      margin: 1em 0; }
+  .sobre .links a {
+    color: oklch(var(--cinza)/100%); }
+    .sobre .links a:hover {
+      color: oklch(var(--roxo)/100%); }
 
 .jobs {
   position: relative;
@@ -698,6 +700,9 @@ body.trocarFigurinhas {
     border-radius: 0; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 960px) {
+  .grid .sobre {
+    grid-template-columns: 1fr 1fr; }
+
   .jobs .job .tns-outer, .jobs .job .infos {
     grid-column: 1 / 3; }
 
@@ -723,7 +728,11 @@ body.trocarFigurinhas {
     grid-column: span 3; }
 
   .texto .grid .grid-1-col {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+
+  .sobre h2 {
+    width: 100%;
+    grid-column: span 2; } }
 /*----------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
   .wrapper {
@@ -757,6 +766,10 @@ body.trocarFigurinhas {
   .nome {
     left: 80px; }
 
+  body.trocarFigurinhas .meta-row {
+    flex-wrap: wrap; }
+    body.trocarFigurinhas .meta-row .meta-label {
+      width: 100%; }
   body.trocarFigurinhas .project-case-study .project-header .project-title {
     flex-wrap: wrap; } }
 
