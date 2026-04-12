@@ -79,11 +79,16 @@ $cinzaProj: oklch(var(--cinzaProj) / 100%);
 }
 .grid-2-col{
 	grid-template-columns: 1fr 1fr;
+	h2{
+		grid-column: span 2;
+	}
 	
 }
 .grid-3-col{
 	grid-template-columns: 1fr 1fr 1fr;
-	
+	h2{
+		grid-column: span 3;
+	}
 	.block-left{
 		grid-column: span 2;
 	}
@@ -537,7 +542,6 @@ body.trocarFigurinhas{
 	h2{
 		font-size: 2rem;
 		line-height: 3rem;
-		grid-column: span 2; 
 	}
 	h3{
 		font-size: 1.25rem;

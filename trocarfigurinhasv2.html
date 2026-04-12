@@ -118,7 +118,7 @@
     
     <div class="header-right block-left">
       <p class="project-intro">
-        No Brasil, álbuns de figurinhas movimentam <b>milhões de pacotinhos por temporada</b>. Grande parte das negociações de troca acontecem em <b>grupos de WhatsApp</b>, através de paredes de texto com centenas de números que precisam ser cruzados manualmente. O processo era caótico, propenso a erros e completamente dependente de atenção humana. Como Product Designer, ajudei a projetar o <b>Trocar Figurinhas</b> do zero: uma plataforma que gerencia coleções, automatiza o cruzamento de inventários e conecta colecionadores. Em <b>5 semanas de operação orgânica</b>, sem orçamento de marketing, o produto atingiu <b>40% de conversão de visitantes</b> com sessões médias de 9 minutos e 30% de retenção semanal consistente.
+       Plataforma que automatiza o cruzamento de figurinhas entre colecionadores, substituindo o caos de listas manuais no WhatsApp por matches instantâneos. <b>~40% de conversão</b> de visitantes, <b>30% de retenção semanal</b>, em 5 semanas sem investimento em marketing.
       </p>
     </div>
   </header>
@@ -154,35 +154,27 @@
       <div class="meta-content">
         <div class="badge"><img src="images/icons/icon_figma.svg" alt=""> <span>Figma</span></div>
         <div class="badge"><img src="images/icons/icon_adobe.svg" alt=""> <span>Adobe Creative Suite</span></div>
-        <div class="badge"><img src="images/icons/icon_posthog.svg" alt=""> <span>Posthog</span></div>
+        <div class="badge"><img src="images/icons/icon_posthog.svg" alt=""> <span>PostHog</span></div>
         <div class="badge"><img src="images/icons/icon_discord.svg" alt=""> <span>Discord</span></div>
-        <div class="badge"><img src="images/icons/icon_tailwindcss.svg" alt=""> <span>Tailwindcss</span></div>
+        <div class="badge"><img src="images/icons/icon_tailwindcss.svg" alt=""> <span>Tailwind CSS</span></div>
       </div>
     </div>
   </section>
 
   <section class="content-block container">
-    <div class="grid grid-2-col">
+    <div class="grid grid-3-col">
     	<h2>Impacto</h2>
-    	<div>
-        <h3>Conversão de ~40%</h3>
-        <p>De cada 10 visitantes que chegam na plataforma, 4 criam conta. Sem landing page otimizada, sem onboarding gamificado, sem incentivo</p>
+    	<div class="col-1">
+        <h3>Conversão de ~40% dos visitantes</h3>
+        <p>De cada 10 visitantes que chegam na plataforma, 4 criam conta e cadastram figurinhas.</p>
       </div>
-      <div>
+      <div class="col-1">
         <h3>Sessão média de ~9 minutos</h3>
-        <p>Para uma ferramenta utilitária, 9 minutos por sessão indica que o usuário não está só passando: está gerenciando coleção, explorando matches e voltando pra conferir novas trocas.</p>
+        <p>Para uma ferramenta utilitária, indica uso ativo: gerenciar coleção, explorar matches, conferir novas trocas</p>
       </div>
-      <div>
-        <h3>+200 interações por usuário</h3>
-        <p>Cada usuário gera em média mais de 200 cliques dentro da plataforma. O volume reflete a natureza do grid de seleção de figurinhas, mas o número por si só sinaliza um nível de engajamento maior que a média</p>
-      </div>
-      <div>
-        <h3>~17 páginas por usuário</h3>
-        <p>O usuário médio navega 17 telas ao longo da sua jornada na plataforma. Isso mostra exploração ativa: não é um produto de uma tela só, o colecionador circula entre inventário, lista de matches, perfis de outros usuários e diferentes álbuns.</p>
-      </div>
-      <div>
+      <div class="col-1">
         <h3>Pico de ~90 usuários ativos semanais</h3>
-        <p>Mesmo sem investimento em marketing, alcançamos um pico de 90 usuários ativos semanais (WAU) em apenas 5 semanas. Uma rápida adoção orgânica logo na fase de MVP.</p>
+        <p>100% organico, alcançamos um pico de 90 usuários ativos semanais (WAU) em 5 semanas.</p>
       </div>
     </div>
   </section>
@@ -197,7 +189,7 @@
     	<h2>Cenário</h2> 
       <div class="block-left">
         <h3>O problema</h3>
-        <p>Durante a febre dos álbuns de figurinhas, os colecionadores dependiam de grupos caóticos no WhatsApp para tentar encontrar trocas. O processo padrão era enviar "paredes de texto" cheias de números, cruzar essas listas manualmente com o próprio inventário para finalmente realizar as trocas. Era uma jornada complicada, com alta carga cognitiva e muito propensa a erros.</p>
+        <p>Durante a febre dos álbuns de figurinhas, colecionadores dependiam de grupos no WhatsApp para negociar trocas. O processo padrão era enviar "paredes de texto" cheias de números, cruzar manualmente com o próprio inventário, número por número. Era uma jornada complicada, com alta carga cognitiva e muito propensa a erros.</p>
       </div>
       <div class="block-right">
         <h3>Meu Papel</h3>
@@ -222,14 +214,10 @@
 	</div>
 
   <section class="content-block container">
-    <div class="grid grid-2-col">
+    <div class="grid grid-3-col">
       <div class="block-left">
         <h2>Entrada de Dados sem Atrito</h2>
-        <p>O maior atrito do produto é cadastrar centenas de números Inserir centenas de números. Para contornar isso, criamos dois métodos de input: um grid visual para seleção rápida e um campo de texto inteligente. Como o usuário já tinha suas listas prontas no WhatsApp, ele pode simplesmente colar a "string" de texto (ex: 2, 5-8 12, 15, 30-45) e o sistema preenche o grid automaticamente. Isso pode reduzir drasticamente o tempo de onboarding.</p>
-      </div>
-      <div class="block-right">
-        <h2>O Motor de Match</h2>
-        <p>Uma vez que os dados estão no sistema, a interface precisa mostrar com quem trocar instantaneamente. Na aba "Trocas", os usuários são ranqueados por equivalência: quem tem a troca mais justa sobe ao topo. Desenhamos os cards de usuário quebrando a transação em duas fatias visuais (Você recebe/Você dá). Um clique no card abre a opção de iniciar a conversa no WhatsApp já com o contexto da troca.</p>
+        <p>O maior desafio era cadastrar dezenas ou centenas de números. Observando os grupos de WhatsApp, percebemos que os usuários já digitavam sequências como "2, 5-8, 12, 30-45". Desenhamos dois métodos de entrada: um grid visual para seleção rápida e um campo de texto que aceita esse formato e preenche o grid automaticamente. Quem já tinha a lista pronta no WhatsApp, copiava, colava, e o onboarding acabava em segundos.</p>
       </div>
     </div>
   </section>
@@ -251,24 +239,31 @@
 		</video>
 	</div>
 
-  <section class="content-block container grid grid-1-col">
-    <div class="grid grid-1-col">
+  <section class="content-block container">
+    <div class="grid grid-3-col">
       <div class="block-left">
-        <h2>De dropdown para album-list:<br>iteração com dados do PostHog</h2>
+        <h2>WhatsApp como canal nativo</h2>
+        <p>No Brasil, WhatsApp é a infraestrutura social. Todo colecionador já está lá, nos grupos, negociando. Em vez de construir um chat interno e competir com esse hábito, desenhamos o produto para se apoiar nele: o match acontece na plataforma, mas um clique abre o WhatsApp direto com o contexto da troca. Isso acelerou o MVP, eliminou custo de infraestrutura de chat e explica os +90% de tráfego direto onde os próprios grupos de WhatsApp viraram o canal de aquisição orgânico.</p>
+        <p>Os cards de match mostram a troca em duas fatias visuais ("Você recebe" / "Você dá"), ranqueados por equivalência: quem tem a troca mais justa sobe ao topo.</p>
       </div>
     </div>
+  </section>
+
+  <picture class="image-container container">
+    <source srcset="images/trocarFigurinhas/08.webp" type="image/webp">
+    <img src="images/trocarFigurinhas/08.jpg" alt="À esquerda, uma interface ilustrando as possibilidades de troca; à direita, uma tela de conversa onde os usuários combinam uma troca. " fetchpriority="low" loading="lazy">
+  </picture>
+
+  <section class="content-block container">
     <div class="grid grid-3-col">
-      <div class="col-1">
-        <h3>A Hipótese Inicial</h3>
-        <p>Na primeira versão, projetamos um menu dropdown fixo no topo da tela para a seleção de álbuns. A lógica por trás dessa decisão era focar na agilidade: alternar o contexto entre muitas coleções com apenas dois cliques, sem sair da tela principal.</p>
-      </div>
-      <div class="col-1">
-        <h3>O Aprendizado</h3>
-        <p>Ao analisar as gravações de sessão através do PostHog, identificamos que os usuários simplesmente ignoravam o atalho do dropdown. Para trocar o álbum ativo, eles faziam um caminho muito mais longo, navegando até a aba específica de "Álbuns" para fazer a troca por lá. O atalho rápido que criamos não correspondia ao modelo mental deles, que exigia uma transição visual mais marcante para confirmar a mudança de contexto.</p>
-      </div>
-      <div class="col-1">
-        <h3>A Solução</h3>
-        <p>Reestruturamos o fluxo principal utilizando as próprias telas que já tínhamos, apenas ajustando a hierarquia da navegação. Agora, o usuário sempre parte de uma visão macro das suas coleções e, ao selecionar um card, entra no contexto específico daquele álbum para gerenciar seu inventário e visualizar as trocas.</p>
+      <div class="block-left">
+        <h2>De dropdown para album-list:<br>iteração com dados do PostHog</h2>
+
+        <p>Com o sucesso do MVP (álbum "Curitiba em Figurinhas"), escalamos para múltiplos álbuns. Projetamos um dropdown no topo da tela para alternar o contexto entre muitas coleções com apenas dois cliques, sem sair da tela principal.</p>
+      
+        <p>Analisando as gravações de sessão através do PostHog, descobrimos que os usuários ignoravam o menu dropdown. Faziam um caminho muito mais longo, navegando até a aba específica de "Álbuns" para trocar o contexto. O atalho não correspondia ao modelo mental deles, que exigia uma transição visual mais marcante.</p>
+  
+        <p>Reestruturamos o fluxo: removemos o dropdown e tornamos a lista de coleções a página inicial padrão. O usuário agora parte de uma visão macro e entra no contexto de cada album ao clicar.</p>
       </div>
     </div>
   </section>
@@ -283,7 +278,7 @@
     <div class="grid grid-3-col">
       <div class="block-left">
         <h2>Matcher</h2>
-        <p>Como ajudamos usuários a trocar com pessoas que ainda não usam o app? Desenhamos a feature "Matcher". O usuário pode copiar a mensagem de WhatsApp de um desconhecido, colar na nossa plataforma, e o sistema cruza com o inventário logado para gerar uma visualização limpa da troca. Isso resolveu uma dor imediata do usuário e transformou a própria funcionalidade em uma ferramenta orgânica de aquisição de novos usuários.</p>
+        <p>Usuários precisavam trocar com pessoas fora da plataforma. Assim surgiu o "Matcher": onde usuário cola a lista de um desconhecido e o sistema cruza com o inventário, gerando uma visualização limpa da troca. Isso resolveu uma dor imediata do usuário e transformou a funcionalidade em um canal orgânico de aquisição de novos usuários.</p>
       </div>
     </div>
   </section>
@@ -299,20 +294,6 @@
 		  <p>Seu navegador não suporta vídeos HTML5.</p>
 		</video>
 	</div>
-
-  <section class="content-block container">
-    <div class="grid grid-3-col">
-      <div class="block-left">
-        <h2>WhatsApp como canal nativo</h2>
-        <p>No Brasil, WhatsApp é a infraestrutura social. Todo colecionador já está lá, nos grupos, negociando. Em vez de construir um chat interno e competir com esse hábito, desenhamos o produto para se apoiar nele: o match acontece na plataforma, mas um clique abre o WhatsApp direto com o contexto da troca. Isso acelerou o MVP, eliminou custo de infraestrutura de chat e explica os +90% de tráfego direto, onde os próprios grupos de WhatsApp viraram o canal de aquisição orgânico.</p>
-      </div>
-    </div>
-  </section>
-
-  <picture class="image-container container">
-	  <source srcset="images/trocarFigurinhas/08.webp" type="image/webp">
-	  <img src="images/trocarFigurinhas/08.jpg" alt="À esquerda, uma interface ilustrando as possibilidades de troca; à direita, uma tela de conversa onde os usuários combinam uma troca. " fetchpriority="low" loading="lazy">
-	</picture>
 
   <picture class="image-container container">
 	  <source srcset="images/trocarFigurinhas/07.webp" type="image/webp">

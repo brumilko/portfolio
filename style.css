@@ -233,9 +233,13 @@ th {
 
 .grid-2-col {
   grid-template-columns: 1fr 1fr; }
+  .grid-2-col h2 {
+    grid-column: span 2; }
 
 .grid-3-col {
   grid-template-columns: 1fr 1fr 1fr; }
+  .grid-3-col h2 {
+    grid-column: span 3; }
   .grid-3-col .block-left {
     grid-column: span 2; }
 
@@ -628,8 +632,7 @@ body.trocarFigurinhas {
     margin-bottom: 5px; }
   body.trocarFigurinhas h2 {
     font-size: 2rem;
-    line-height: 3rem;
-    grid-column: span 2; }
+    line-height: 3rem; }
   body.trocarFigurinhas h3 {
     font-size: 1.25rem; }
   body.trocarFigurinhas picture {
@@ -749,7 +752,7 @@ body.trocarFigurinhas {
     left: 80px; }
 
   body.trocarFigurinhas .project-case-study .grid-2-col, body.trocarFigurinhas .project-case-study .project-header {
-    grid-template-columns: auto; }
+    grid-template-columns: 1fr; }
   body.trocarFigurinhas h2 {
     grid-column: 1; }
   body.trocarFigurinhas .content-block {
@@ -769,7 +772,8 @@ body.trocarFigurinhas {
   body.trocarFigurinhas .meta-row {
     flex-wrap: wrap; }
     body.trocarFigurinhas .meta-row .meta-label {
-      width: 100%; }
+      width: 100%;
+      padding-bottom: .25rem; }
   body.trocarFigurinhas .project-case-study .project-header .project-title {
     flex-wrap: wrap; } }
 

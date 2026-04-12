@@ -125,7 +125,7 @@
 	body.trocarFigurinhas{
 		.project-case-study{
 			.grid-2-col, .project-header{
-				grid-template-columns: auto;
+				grid-template-columns: 1fr;
 			}
 		}
 		h2 {
@@ -158,6 +158,7 @@
 			flex-wrap: wrap;
 			.meta-label{
 				width: 100%;
+				padding-bottom: .25rem;
 			}
 		}
 		.project-case-study{
