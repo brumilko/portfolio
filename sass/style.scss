@@ -12,32 +12,32 @@ Version: 1
 		Variables
 ---------------------------*/
 
-
-  // --color-purple:     oklch(62% 0.212 293deg);   /* unchanged — anchor */
-
-  // --color-dark:       oklch(16% 0.018 293deg);   /* deep purple-gray   */
-  // --color-background: oklch(97% 0.012 293deg);   /* lavender-white     */
-  // --color-muted:      oklch(44% 0.022 293deg);   /* dusty purple-gray  */
-  // --color-gray:       oklch(62% 0.018 293deg);   /* soft violet-gray   */
-
 :root {
   /* Store channels, not the full color */
   --roxo:			62% 0.212 293deg;
   --bg:				0.227 0.018 293deg;
   --branco:			97% 0.012 293deg;
-  --cinzaEscuro:	44% 0.022 293deg;
   --cinza:			62% 0.018 293deg;
-
   --cinzaProj:	0.7357 0.0063 239.85;
 }
 
+// @media (prefers-color-scheme: dark) {
+//   :root {
+// 	  --roxo:			46.54% 0.313 299.8deg;
+// 	  --bg:				96.16% 0.001 286.4deg;
+// 	  --branco:			19.38% 0.002 264.1deg;
+// 	  --cinza:			62% 0.018 293deg;
+
+// 	  --cinzaProj:	38.07% 0.003 243.3;
+//   }
+// }
+
 $cinza: 		oklch(var(--cinza) / 100%);
-$cinzaEscuro: 	oklch(var(--cinzaEscuro) / 100%);
 $background: 	oklch(var(--bg) / 100%);
 $roxo: 			oklch(var(--roxo) / 100%);
 $branco: 		oklch(var(--branco) / 100%);
-
 $cinzaProj: oklch(var(--cinzaProj) / 100%);
+
 
 
 /*---------------------------
@@ -105,6 +105,10 @@ $cinzaProj: oklch(var(--cinzaProj) / 100%);
 
 picture{
 	margin: 0;
+	@include rounded(15px);
+	overflow: hidden;
+	display: block;
+	border: 1px solid oklch(var(--cinzaProj) / 10%);
 	img{
 		width: 100%;
 		height: auto;
@@ -167,7 +171,7 @@ h1, h2, h3, h4, h5, h6{
 	a.badge{
 		
 	  border: 1px solid $roxo;
-	  color: $cinza;
+	  color: $roxo;
 	  font-weight:600;
 	  width: fit-content;
 	  height: fit-content;
@@ -220,7 +224,7 @@ html, body{
 		position: relative;
 		width:30px;
 		height:30px;
-		fill: $cinzaEscuro;
+		fill: $cinza;
 		z-index:3;
 		@include animate();
 		-webkit-filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0));
@@ -286,12 +290,12 @@ html, body{
 	color: $roxo;
 	b{
 		font-weight:300;
-		color: $cinza;
+		color: $cinzaProj;
 	}
 	small{
 		font-size:12px;
 		font-weight:300;
-		color: $cinza;
+		color: $cinzaProj;
 	}
 }
 .lang{
@@ -299,7 +303,7 @@ html, body{
     position: absolute;
     right: 64px;
 	a{
-		color: $cinza;
+		color: $cinzaProj;
 		&.active{
 			color: $roxo;
 		}
@@ -323,7 +327,7 @@ html, body{
 	}
 	.links{
 		a{
-			color: $cinza;
+			color: $cinzaProj;
 			&:hover{
 				color: $roxo;
 			}
@@ -337,14 +341,13 @@ html, body{
 	.job{
 		margin-bottom: 64px;
 		padding-top: 64px;
-  		border-top: 1px solid rgba(255, 255, 255, 0.1);
+  		border-top: 1px solid oklch(var(--cinzaProj) / 15%);
   		z-index: 4;
   		position:relative;
   		gap: 32px;
   		@include flex-wrap(wrap);
   		@include align-items(flex-start);
   		&:last-child{
-  			border-bottom: 1px solid $cinzaEscuro;
   			padding-bottom: 64px;
   		}
 		.infos{
@@ -361,7 +364,7 @@ html, body{
 				color: $roxo;
 			}
 			b{
-				color: $cinza;
+				color: $cinzaProj;
 				font-weight:300;
 			}
 		}
@@ -378,7 +381,6 @@ html, body{
 				img{
 					width: 100%;
 					height: auto;
-					@include rounded(15px);
 				}
 			}
 
@@ -396,7 +398,7 @@ html, body{
   					margin: 0 2px;
   					@include box-shadow(0px, 0px, 5px, rgba(0,0,0,0.2));
   					border-bottom: 1px solid rgba(0,0,0,0.2);
-					border-top: 1px solid rgba(255, 255, 255, 0.3);
+					border-top: 1px solid oklch(var(--cinzaProj) / 30%);
   					&.tns-nav-active{
   						background-color: $roxo;
   					}
@@ -505,7 +507,7 @@ footer{
 body.trocarFigurinhas{
 	line-height: 1.5rem;
 	nav{
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		border-bottom: 1px solid oklch(var(--cinzaProj) / 15%);
 		padding-bottom: 64px;
 		line-height: initial;
 	}
@@ -518,7 +520,7 @@ body.trocarFigurinhas{
 		padding-top:64px;
 	}
 	.project-metadata{
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		border-bottom: 1px solid oklch(var(--cinzaProj) / 15%);
 		padding-bottom: 64px;
 	}
 	h2, h3, p{
@@ -547,10 +549,7 @@ body.trocarFigurinhas{
 		font-size: 1.25rem;
 	}
 	picture{
-		@include rounded(15px);
-		overflow: hidden;
 		display: block;
-		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 	.project-case-study{
 		gap: 32px;
